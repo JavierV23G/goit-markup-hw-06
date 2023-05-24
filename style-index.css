@@ -100,7 +100,8 @@ nav {
     align-items: center;
 }
 
-.contact a:hover {
+.contact a:hover,
+.contact a:focus {
     color: var(--color-azul);
     fill: var(--color-azul);
 }
@@ -172,6 +173,8 @@ nav {
     line-height: 1.4;
 }
 
+/* MODAL STYLE */
+
 .main-title .open__modal {
     background-color: var(--color-azul);
     color: var(--color-hueso);
@@ -216,6 +219,64 @@ nav {
     opacity: 1;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    padding: 40px;
+}
+
+.modal-form h3 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0px 0px 12px 0px;
+}
+
+.label__name {
+    color: var(--color-gris);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.label__conditions {
+    color: var(--color-gris);
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    width: 400px;
+    height: 24px;
+    position: relative;
+    left: 50px;
+    letter-spacing: 0.03em;
+    margin-top: 20px;
+}
+
+.modal-form-checkbox {
+    position: absolute;
+    left: 70px;
+    bottom: 112px;
+    width: 16px;
+    height: 15px;
+    border-color: var(--color-texto);
+}
+
+.modal-form-input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    display: block;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 30px;
+    margin: 2px 0px 10px 0px;
+}
+
+.modal-form-comentario {
+    width: 100%;
+    height: 120px;
+    display: block;
+    border: 1px solid rgba(163, 63, 63, 0.2);
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 15px;
+    resize: none;
 }
 
 .modal-form.is-hidden {
@@ -226,8 +287,8 @@ nav {
     position: relative;
     width: 30px;
     height: 30px;
-    right: 8px;
-    top: 8px;
+    right: -30px;
+    top: -30px;
     float: right;
     background: transparent;
     border: 1px solid #0000001A;
@@ -241,12 +302,55 @@ nav {
     right: -7px;
 }
 
+.modal__button-submit {
+    color: var(--color-hueso);
+    background-color: var(--color-azul);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    position: absolute;
+    left: 164px;
+    top: 500px;
+}
+
 .close__modal:hover, 
 .close__modal:focus {
     color: var(--color-azul);
     text-decoration: none;
     cursor: pointer;
-  }
+}
+
+.modal__info {
+    position: relative;
+}
+
+.svg-modal {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+}
+
+.modal-form-input:hover,
+.modal-form-input:focus {
+    border-color: var(--color-azul);
+}
+
+.modal-form-input:hover+svg use,
+.modal-form-input:focus+svg use {
+    fill: var(--color-azul);
+}
+
+textarea:hover,
+textarea:focus {
+    border: 1px solid var(--color-azul)
+}
 
 /* DESCRIPTIONS */
 .content1 {
@@ -390,6 +494,7 @@ nav {
     margin: 0 auto;
     padding: 0px;
 }
+
 .content3 .svg-container ul {
     display: flex;
     width: 206px;
@@ -404,16 +509,11 @@ nav {
     flex-basis: calc((100% - 30px) / 4);
 }
 
-.link-icon:hover {
+.link-icon:hover,
+.link-icon:focus {
     fill: var(--color-hueso);
-}
-
-.behind-icon:hover,
-.behind-icon-footer:hover {
     background-color: var(--color-azul);
     border-radius: 100%;
-    width: 44px;
-    height: 44px;
     cursor: pointer;
 }
 
@@ -496,17 +596,25 @@ nav {
     margin-bottom: 20px;
 }
 
+.foot-info address {
+    color: var(--color-hueso);
+    line-height: 1.7;
+    font-style: normal;
+}
+
 .foot-info li a {
     color: var(--color-hueso);
     line-height: 1.7;
     opacity: 60%;
 }
 
-.foot-info address {
-    color: var(--color-hueso);
+.foot-info li a:hover,
+.foot-info li a:focus {
+    color: var(--color-azul);
     line-height: 1.7;
-    font-style: normal;
+    opacity: 60%;
 }
+
 
 .foot-page .find-us {
     display: flex;
@@ -516,8 +624,7 @@ nav {
     gap: 20px;
 }
 
-.foot-page .find-us .text-findus,
-.foot-page .find-us .social-container {
+.foot-page .find-us ul {
     margin: 0px 0px;
     padding: 0px 0px;
 }
@@ -538,17 +645,72 @@ nav {
     align-items: center;
 }
 
-.behind-icon-footer {
+.foot-icon {
+    width: 44px;
+    height: 44px;
+    fill: var(--color-hueso);
+    align-items: left;
     background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    flex-basis: calc((100% - 30px) / 4);
+}
+
+.foot-icon:hover,
+.foot-icon:focus {
+    background-color: var(--color-azul);
     border-radius: 100%;
     width: 44px;
     height: 44px;
+    cursor: pointer;
 }
 
-.foot-icon {
-    width: 44px;
-    fill: var(--color-hueso);
-    align-items: left;
-    flex-basis: calc((100% - 30px) / 4);
+.subscription {
+    display: flex;
+    margin: 72px 0px 0px 93px;
+    width: 575px;
+    height: 86px;
+}
+
+.subscription label {
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--color-hueso);
+    display: block;
+}
+
+.subscription .email-box {
+    width: 358px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    background-color: rgba(255,255,255,0);
+    margin-top: 18px;
+    color: var(--color-hueso);
+}
+
+.subscription .btn-sub {
+    margin-left: 12px;
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: var(--color-azul);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: var(--color-hueso);
+    border: none;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+.send-sub {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    left: 515px;
+    bottom: 38px;
 }
 
