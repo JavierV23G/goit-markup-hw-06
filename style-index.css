@@ -20,7 +20,9 @@
 }
 
 .top-page {
+    width: 1600px;
     height: 80px;
+    margin: 0 auto;
     padding: 0px 0px;
     align-items: center;
     display: flex;
@@ -155,7 +157,8 @@ nav {
     background-repeat: no-repeat;
     background-position: center;
     padding: 47px 0px;
-    margin: 0px 0px;
+    margin: 0 auto;
+    width: 1600px;
 }
 
 .main-title .container {
@@ -355,7 +358,8 @@ textarea:focus {
 /* DESCRIPTIONS */
 .content1 {
     padding: 47px 0px;
-    margin: 0px 0px
+    margin: 0 auto;
+    width: 1600px;
 }
 .content1 h3 {
     font-weight: 700;
@@ -389,6 +393,10 @@ textarea:focus {
 
 /* A QUE NOS DEDICAMOS */
 
+.content2 {
+    width: 1600px;
+    margin: 0 auto;
+}
 .content2 h2,
 .content3 h2,
 .content4 h2
@@ -448,7 +456,8 @@ textarea:focus {
 .content3 {
     background-color: var(--color-behindourteam);
     padding: 47px 0px;
-    margin: 0px 0px;
+    margin: 0 auto;
+    width: 1600px;
 }
 
 .content3 .container {
@@ -521,7 +530,8 @@ textarea:focus {
 
 .content4 {
     padding: 47px 0px;
-    margin: 0px 0px;
+    margin: 0 auto;
+    width: 1600px;
 }
 .content4 .container .client {
     width: 170px;
@@ -573,6 +583,8 @@ textarea:focus {
     display: flex;
     background-color: var(--color-behindpage);
     padding: 0px 0px;
+    margin: 0 auto;
+    width: 1600px;
 }
 
 .foot-page .container {

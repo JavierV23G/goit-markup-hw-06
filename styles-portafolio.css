@@ -20,7 +20,9 @@
 /* TOP WEBSITE */
 
 .top-page {
+    width: 1600px;
     height: 80px;
+    margin: 0 auto;
     padding: 0px 0px;
     align-items: center;
     display: flex;
@@ -150,8 +152,9 @@ nav {
 
 .main-content {
     display: flex;
-    margin: 0px 0px;
+    margin: 0 auto;
     padding: 47px 0px;
+    width: 1600px;
 }
 
 .main-content .container {
@@ -286,8 +289,10 @@ nav {
 .foot-page {
     display: flex;
     background-color: var(--color-footpage);
+    width: 1600px;
     height: 252px;
     padding: 0px 0px;
+    margin: 0 auto;
 }
 
 .foot-page .container {
